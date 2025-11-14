@@ -1,0 +1,336 @@
+:root{
+  --barca-blue:#0A092D;
+  --barca-maroon:#A50044;
+  --gold:#FFD700;
+  --muted:rgba(255,255,255,0.8);
+  --glass:rgba(255,255,255,0.05);
+  --win:#00C853;
+  --lose:#D32F2F;
+  --draw:#FFEB3B;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,var(--barca-blue),#04031a);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(10,9,45,0.9);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;}
+.brand{display:flex;align-items:center;gap:10px;}
+.crest-logo{width:46px;height:46px;border-radius:50%;object-fit:cover;box-shadow:0 0 10px rgba(255,215,0,0.4);}
+.brand-text{color:var(--gold);font-weight:800;}
+.nav-links{display:flex;gap:18px;}
+.nav-links a{color:#fff;text-decoration:none;font-weight:600;position:relative;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:3px;background:linear-gradient(90deg,var(--barca-maroon),var(--gold));transition:.3s;}
+.nav-links a:hover::after{width:100%;}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:url('../assets/images/msn1.jpg') center/cover fixed no-repeat;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  position:relative;
+}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,45,0.65),rgba(165,0,68,0.45));}
+.hero-inner{position:relative;z-index:2;}
+.hero-title{font-size:4rem;color:var(--gold);font-weight:900;margin-bottom:10px;}
+.hero-sub{color:var(--muted);font-weight:500;}
+
+/* SECTIONS */
+.section-head{text-align:center;margin:60px auto 20px;}
+.section-head h2{color:var(--gold);}
+.section-head p{color:var(--muted);}
+
+/* ==== MESSI CENTERED STYLE ==== */
+.messi-widget.centered {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.5s ease;
+}
+
+.messi-widget.centered img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.messi-widget.centered:hover img {
+  transform: scale(1.05);
+}
+
+.messi-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  text-align: left;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75));
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.messi-widget.centered:hover .messi-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.messi-overlay h3 {
+  color: var(--gold);
+  font-size: 1.8rem;
+  margin: 0 0 8px 0;
+}
+
+.messi-overlay p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+
+
+
+
+/* PLAYERS */
+.player-carousel-wrap{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px;}
+.player-slider{display:flex;overflow-x:auto;gap:16px;padding:10px;scroll-snap-type:x mandatory;}
+.player-card{flex:0 0 200px;height:300px;border-radius:12px;overflow:hidden;position:relative;cursor:pointer;scroll-snap-align:start;transition:transform .3s;}
+.player-card img{width:100%;height:100%;object-fit:cover;}
+.player-card:hover{transform:translateY(-5px);}
+.player-card .overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,transparent,rgba(165,0,68,0.9));padding:10px;transform:translateY(100%);transition:.4s;}
+.player-card:hover .overlay{transform:translateY(0);}
+.overlay h3{color:var(--gold);margin:0;}
+.overlay p{margin:3px 0 0;}
+.overlay .no{color:#fff;font-weight:700;}
+
+/* MATCHES */
+/* ==== MATCHES - SAME SIZE, SLIDER STYLE ==== */
+.matches-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  padding: 30px 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.match-card {
+  flex: 0 0 400px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  scroll-snap-align: start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.match-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: top center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.match-info {
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.match-info h4 {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.match-info p {
+  color: var(--muted);
+  margin: 2px 0;
+  font-size: 0.95rem;
+}
+
+.match-popup {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.75);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.match-card:hover .match-popup {
+  display: block;
+}
+
+/* Highlight warna */
+.match-card.win { border-left: 8px solid var(--win); }
+.match-card.draw { border-left: 8px solid var(--draw); }
+.match-card.lose { border-left: 8px solid var(--lose); }
+
+/* Scrollbar minimal */
+.matches-slider::-webkit-scrollbar {
+  height: 8px;
+}
+.matches-slider::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+
+/* NEWS */
+.news-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 12px;
+}
+
+.news-card {
+  flex: 0 0 280px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.news-card img {
+  width: 100%;
+  height: 150px; /* tetap sama seperti versi sebelumnya */
+  object-fit: cover;
+}
+
+.news-body {
+  padding: 10px;
+}
+
+.news-body h4 {
+  color: var(--gold);
+  margin: 4px 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.news-date {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #bbb;
+  opacity: 0.9;
+}
+
+
+
+/* SHOP */
+.shop-grid{max-width:1200px;margin:0 auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.shop-item{background:rgba(255,255,255,0.05);padding:12px;border-radius:10px;text-align:center;}
+.shop-item img{width:100%;height:220px;object-fit:cover;border-radius:10px;}
+.shop-item button{background:var(--barca-maroon);border:none;color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer;}
+.shop-item button:hover{background:var(--gold);color:#000;}
+
+/* TEAM STYLE */
+.team-style{position:relative;margin-top:40px;}
+.team-style img{width:100%;height:500px;object-fit:cover;opacity:0.9;}
+.team-overlay{position:absolute;bottom:0;left:0;right:0;padding:40px;background:linear-gradient(180deg,transparent,rgba(10,9,45,0.85));text-align:center;}
+.team-overlay h2{color:var(--gold);margin-bottom:10px;}
+.team-overlay p{color:var(--muted);}
+
+/* YOUTUBE */
+.youtube-section{text-align:center;padding:50px 20px;}
+.youtube-section h2{color:var(--gold);margin-bottom:20px;}
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:20px;max-width:1000px;margin:0 auto;}
+.yt-grid iframe{width:100%;height:250px;border-radius:10px;border:none;}
+
+/* FOOTER */
+.site-footer{background:rgba(10,9,45,0.7);padding:20px;text-align:center;color:var(--muted);}
+
+/* ==== VIDEO THUMBNAIL GRID (UPDATED) ==== */
+.messi-video, .yt-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.video-thumb {
+  position: relative;
+  width: 480px; /* proporsional seperti thumbnail YouTube */
+  height: 270px; /* rasio 16:9 */
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 3rem;
+  transition: background 0.3s ease;
+}
+
+.video-thumb:hover .play-overlay {
+  background: rgba(0,0,0,0.55);
+}
+
+.video-title {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
