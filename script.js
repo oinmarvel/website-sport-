@@ -1,4 +1,4 @@
-// ==== PLAYER DATA ====
+// ==== PLAYER Barca====
 const players = [
   { no: 1, name: "Marc-André ter Stegen", position: "Goalkeeper", img: "players/terstegen.jpg" },
   { no: 3, name: "Alejandro Balde", position: "Defender", img: "players/balde.jpg" },
