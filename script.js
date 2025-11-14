@@ -18,12 +18,12 @@ const players = [
   { no: 23, name: "Jules Koundé", position: "Defender", img: "players/kounde.jpg" }
 ];
 
-// ==== SHOP DATA ====
+// ====DATA ShOP====
 const shopItems = [
-  { title: "Home Jersey 2025/26", price: "€89.99", img: "shop/jersey1.jpg" },
-  { title: "Away Jersey 2025/26", price: "€89.99", img: "shop/jersey2.jpg" },
-  { title: "Third Jersey 2025/26", price: "€89.99", img: "shop/jersey3.jpg" },
-  { title: "Goalkeeper Jersey 2025/26", price: "€89.99", img: "shop/jersey4.jpg" }
+  { title: "Home Jersey 2025/26", price: "€90", img: "shop/jersey1.jpg" },
+  { title: "Away Jersey 2025/26", price: "€90", img: "shop/jersey2.jpg" },
+  { title: "Third Jersey 2025/26", price: "€80", img: "shop/jersey3.jpg" },
+  { title: "Goalkeeper Jersey 2025/26", price: "€75", img: "shop/jersey4.jpg" }
 ];
 
 // ==== MATCH DATA ====
