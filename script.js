@@ -1,4 +1,4 @@
-// ==== PLAYER Barca====
+// ==== BARCA PLAYER ====
 const players = [
   { no: 1, name: "Marc-André ter Stegen", position: "Goalkeeper", img: "players/terstegen.jpg" },
   { no: 3, name: "Alejandro Balde", position: "Defender", img: "players/balde.jpg" },
@@ -36,7 +36,7 @@ const matches = [
     { opponent: "Sevilla", date: "Oct 31, 2025", score: "1 - 0", result: "win", img: "matches/match6.jpg", mvp:"Ter Stegen", rating:"8.9", goals:0, assists:0 }
 ];
 
-// ==== NEWS DATA ====
+// ==== DATA NEWS ====
 const news = [
   { 
     title: "Barça secure another dominant home win", 
