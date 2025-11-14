@@ -26,7 +26,7 @@ const shopItems = [
   { title: "Goalkeeper Jersey 2025/26", price: "€75", img: "shop/jersey4.jpg" }
 ];
 
-// ==== MATCH DATA ====
+// ==== DATA MATCH ====
 const matches = [
   { opponent: "Real Madrid", date: "Oct 20, 2025", score: "3 - 1", result: "win", img: "matches/match1.jpg", mvp:"Pedri", rating:"9.1", goals:1, assists:1 },
   { opponent: "Atletico Madrid", date: "Oct 26, 2025", score: "2 - 2", result: "draw", img: "matches/match2.jpg", mvp:"Lewandowski", rating:"8.5", goals:2, assists:0 },
